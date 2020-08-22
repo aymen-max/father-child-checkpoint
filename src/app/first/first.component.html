@@ -1,0 +1,18 @@
+<div>
+  <h1 [style.color]="colorT"> {{mytext}}</h1>
+</div>
+<br>
+<input
+#input
+type="text"
+name=""
+[value]="colorD"
+[(ngModel)]="colorT"
+>
+<br>
+<br>
+<button (click)="colorDefault()" class="btn btn-primary">
+  default color
+</button>
+
+
