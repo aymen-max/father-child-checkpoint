@@ -1,3 +1,4 @@
-<p #father [style]="'color:blue;background-color:red'">father works!</p>
+<p #father [style]="'color:blue;'"
+  [style.background-color]="color">father works!</p>
 
-<app-child [colorMe]="father.style"></app-child>
+<app-child (myFavoriteColor)="backgroundFather($event)" [colorMe]="father.style"></app-child>

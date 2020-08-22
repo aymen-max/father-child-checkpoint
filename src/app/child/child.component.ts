@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -12,4 +12,10 @@ export class ChildComponent implements OnInit {
   ngOnInit(): void {
   }
 @Input() colorMe:any;
+@Output() myFavoriteColor = new EventEmitter();
+
+send(){
+  this.myFavoriteColor.emit('green');
+}
+
 }
